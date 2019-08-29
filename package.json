@@ -1,32 +1,24 @@
-
 {
-  "name": "prokatsnaryaga",
+  "name": "tent4rent",
   "version": "0.1.0",
   "private": true,
-  "description": "проект «Прокат туристического снаряжения»",
+  "description": "Tent4Rent",
   "devDependencies": {
-    "autoprefixer": "6.5.3",
-    "browser-sync": "2.18.2",
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
     "gulp": "3.9.1",
-    "gulp-less": "3.3.0",
-    "gulp-plumber": "1.1.0",
-    "gulp-postcss": "6.2.0",
-    "@htmlacademy/editorconfig-cli": "0.1.x"
+    "gulp-less": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "test": "editorconfig-cli",
     "build": "gulp style",
     "start": "gulp serve"
   },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
-  ],
   "engines": {
-    "node": "6.7"
+    "node": "10.16.0"
   }
 }
