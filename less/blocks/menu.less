@@ -41,23 +41,6 @@
     color: #333333;
     border-top: 3px solid #f7c51e;
   }
-
-  &:before {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 15px;
-    right: 0;
-    top: 50%;
-    margin-top: -8px;
-    background: rgba(0,0,0,.08);
-  }
-
-  &:last-child {
-    &:before {
-      display: none;
-    }
-  }
 }
 
 .menu__submenu {
@@ -71,6 +54,7 @@
   background-color: #f7c51e;
   list-style: none;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 .menu__submenu-link {
