@@ -20,5 +20,8 @@
   },
   "engines": {
     "node": "10.16.0"
+  },
+  "dependencies": {
+    "gulp-pug": "^4.0.1"
   }
 }

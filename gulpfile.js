@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
+var pug = require("gulp-pug");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
@@ -20,6 +21,15 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+
+gulp.task('views', function () {
+  return gulp.src('test.pug')
+  .pipe(pug({
+    // Your options in here.
+  }))
+  .pipe(gulp.dest('build'))
+});
+
 gulp.task("serve", ["style"], function() {
   server.init({
     server: ".",
@@ -28,7 +38,6 @@ gulp.task("serve", ["style"], function() {
     cors: true,
     ui: false
   });
-
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
