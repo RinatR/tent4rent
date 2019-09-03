@@ -1,0 +1,46 @@
+.modal {
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 815px;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  z-index: 3;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: #f7c51e;
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%)  rotate(45deg);
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: #f7c51e;
+  }
+}

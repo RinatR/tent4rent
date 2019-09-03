@@ -5,6 +5,7 @@ build/
 *.log
 *.pdf
 *.psd
+*.pug
 *.sublime*
 css/*.css
 node_modules/

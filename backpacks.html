@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="title" content="Прокат палаток, рюкзаков в Волгограде">
+  <meta name="description" content="Прокат палаток и другого туристического снаряжения в Волгограде без залога. Сдаем в аренду палатки, спальные мешки, туристические коврики и прочее снаряжение" />
+  <meta name="keywords" content="прокат палаток в Волгограде, прокат рюкзаков в Волгограде, прокат туристического снаряжения, туристическая палатка, туристический рюкзак, спальный мешок, туристический коврик" />
   <title>Прокат палаток в Волгограде</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -111,6 +114,19 @@
               </ul>
             </div>
           </article>
+          <article class="product">
+            <img class="product__image" src="img/creek_80.jpeg" alt="Рюкзак Nordway Creek 80 литров">
+            <a href="#" class="product__name">Рюкзак Nordway Creek 80 литров</a>
+            <span class="product__price">200 руб./сутки</span>
+            <a class="btn btn--add_to_cart" href="#">Забронировать</a>
+             <div class="product__overlay">
+              <ul>
+                <li>Для длительного (несколько дней) треккинга или путешествий.</li>
+                <li>Легкий, простой и функциональный рюкзак объемом 80 литров с карманами и легким доступом к содержимому для нерегулярных походов и путешествий.</li>
+                <li>вес: 1.8 килограмма</li>
+              </ul>
+            </div>
+          </article>
         </section>
       </div>
     </main>
@@ -141,7 +157,35 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__body">
+        <p>Для бронирования заказа, пожалуйста, обратитесь по номеру телефона: +7 (903) 479-14-52 или через онлайн-чат Jivosite.
+        Спасибо!</p>
+      </div>
+      <button class="modal__close"></button>
+    </div>
+    <div class="page-wrapper__overlay"></div>
   </div>
+  <script>
+    var order_btn = document.getElementsByClassName("btn--add_to_cart");
+    var modal = document.querySelector(".modal");
+    var overlay = document.querySelector(".page-wrapper__overlay");
+    var body = document.querySelector("body");
+    var modal_close = document.querySelector(".modal__close");
+
+    for(var i = 0; i < order_btn.length; i++) {
+      order_btn[i].addEventListener("click", function() {
+      modal.style.display = "block";
+      overlay.style.display = "block";
+      body.style.overflow = "hidden";
+      });
+    }
+
+    modal_close.addEventListener("click", function() {
+      modal.style.display = "none";
+      overlay.style.display = "none";
+      });
+  </script>
 </body>
 </html>
 
