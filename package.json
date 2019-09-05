@@ -9,7 +9,12 @@
     "gulp": "3.9.1",
     "gulp-less": "latest",
     "gulp-plumber": "latest",
-    "gulp-postcss": "latest"
+    "gulp-postcss": "latest",
+    "del": "^3.0.0",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-rename": "latest",
+    "run-sequence": "latest"
   },
   "browserslist": [
     "defaults"
